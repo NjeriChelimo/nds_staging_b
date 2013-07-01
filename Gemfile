@@ -37,3 +37,21 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'figaro'
+gem 'libv8'
+
+group :assets do
+  gem 'therubyracer', :platform=>:ruby, :require=>"v8"
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
+  gem 'quiet_assets'
+end
+
+group :production do
+  gem 'thin'
+end
+
